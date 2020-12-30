@@ -1,0 +1,54 @@
+/*
+    1.<table>
+    2.css float(clearfix)
+    3.css display:inline-block
+    4.css flexbox
+    5.css grid
+*/
+.list{
+display: flex;
+justify-content: center;
+
+  
+}
+.box{
+    width:300px;margin: 10px;/*內部左右排列*/
+    background-color: aquamarine;
+}
+.exam1{
+    display: flex;
+justify-content: center;
+}
+.box1{
+    width:300px;margin: 10px;/*內部左右排列*/
+    background-color: rgb(214, 87, 37);
+    text-align: center;
+    margin: 10px;
+    text-overflow:clip;
+    font-size: 72px;
+    font-style: inherit;
+    flood-color: lavender;
+    
+}
+.box2{
+    width:300px;margin: 10px;/*內部左右排列*/
+    background-color: rgb(162, 211, 226);
+    text-align: center;
+    margin: 10px;
+    text-overflow:clip;
+    font-size: 72px;
+    color: lightcoral;
+    
+}
+.welcome{
+    height: 300px;
+    color: lightslategrey;
+    font-size: 96px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;/*垂直*/
+    align-items: center;/*水平*/
+}
+
+/*
+*/
