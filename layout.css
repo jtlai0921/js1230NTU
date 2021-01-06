@@ -41,6 +41,9 @@ CSS Media Query*/
     .title{
         font-size: 24px;
     }
+    .title-break{
+        display:block;
+    }
 }
 .exam1{
     display: flex;
@@ -67,6 +70,9 @@ justify-content: center;
     color: lightcoral;
     
 }
+.title-break{
+    display: none;
+}
 .welcome{
     height: 300px;
     color: lightslategrey;
@@ -91,6 +97,24 @@ justify-content: center;
 }
 .body{
     margin: 0px;
+}
+@media(max-width:1250px){
+    /*PC螢幕*/
+    .box{
+        width: 45%;
+    }
+}
+@media(max-width:500px){
+    /*Phone螢幕*/
+    .box{
+        width: 90%;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .title-break{
+        display:block;
+    }
 }
 /*
 */ 
