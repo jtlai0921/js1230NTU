@@ -5,15 +5,42 @@
     4.css flexbox
     5.css grid
 */
+.title{
+    font-size: bold;
+    font-size: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
 .list{
 display: flex;
+/*左右*/
+flex-wrap: wrap;
+/*換行*/
 justify-content: center;
-
+/*水平*/
   
 }
 .box{
-    width:300px;margin: 10px;/*內部左右排列*/
+    width:280px;margin: 10px;
+    /*內部左右排列*/
     background-color: aquamarine;
+}
+/*RWD
+CSS Media Query*/
+@media(max-width:1250px){
+    /*PC螢幕*/
+    .box{
+        width: 45%;
+    }
+}
+@media(max-width:500px){
+    /*Phone螢幕*/
+    .box{
+        width: 90%;
+    }
+    .title{
+        font-size: 24px;
+    }
 }
 .exam1{
     display: flex;
