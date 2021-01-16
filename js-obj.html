@@ -43,19 +43,41 @@
         };
         console.log(persom);
         //包裝建立物件的程式
-        function createPointObject(){
+        // function createPointObject(xArg,yArg){
+        //     let p=new Object();
+        //     p.x=xArg;
+        //     p.y=yArg;
+        //     p.show=function(){
+        //         console.log(this.x+","+this.y);
+        //     };
+        //     return p;
+        // }
+        // let p1=createPointObject();
+        // let p2=createPointObject();
+        // //使用物件
+        // console.log(3,4);
+        // console.log(0,0);
+        // p1.show();
+        // p2.show();
+        //用來建立物件的函式
+        //建構函式(Constructor):專門用來建立物件的函式
+        function createPointObject(name,age,talk){
             let p=new Object();
-            p.x=3;
-            p.y=4;
+            p.x=name;
+            p.y=age;
+            p.z=talk;
             p.show=function(){
-                console.log(this.x+","+this.y);
+                console.log(this.x+","+this.y+","+this.z);
             };
             return p;
         }
-        let p1=createPointObject();
-        console.log(p1);
-        console.log(p1.x+p1.y);
+        let p1=createPointObject("l,plmxsx",22,"xsx11x");
+        let p2=createPointObject("xsxsx",55,"sxsxsx");
+        //使用物件
+        console.log(3,4);
+        console.log(0,0);
         p1.show();
+        p2.show();
     </script>
 </body>
 
