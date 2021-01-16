@@ -80,25 +80,59 @@
         // p1.show();
         // p2.show();
         //////////////////
-        function Point(name,age,talk){
-            //自動建立空白物件，在建構函式中使用this取得
+    //     function Point(name,age,talk){
+    //         //自動建立空白物件，在建構函式中使用this取得
            
-            this.x=name;
-            this.y=age;
-            this.z=talk;
-            this.show=function(){
-                console.log(this.x+","+this.y+","+this.z);
-            };
-            //return this;建構式自動rreturn this
-        }
-        //呼叫建構函式:new建構函式名稱(參數資料,參數資料,.........)
-        // let p1=createPointObject("l,plmxsx",22,"xsx11x");
-        // let p2=createPointObject("xsxsx",55,"sxsxsx");
-        //使用物件
-       let p1=new Point(1,2,3);
-       let p2=new Point(4,25,34);
-        p1.show();
-        p2.show();
+    //         this.x=name;
+    //         this.y=age;
+    //         this.z=talk;
+    //         this.show=function(){
+    //             console.log(this.x+","+this.y+","+this.z);
+    //         };
+    //         //return this;建構式自動rreturn this
+    //     }
+    //     //呼叫建構函式:new建構函式名稱(參數資料,參數資料,.........)
+    //     // let p1=createPointObject("l,plmxsx",22,"xsx11x");
+    //     // let p2=createPointObject("xsxsx",55,"sxsxsx");
+    //     //使用物件
+    //    let p1=new Point(1,2,3);
+    //    let p2=new Point(4,25,34);
+    //     p1.show();
+    //     p2.show();
+    /*
+    add(args)函式計算加法的結果
+    參數args:物件
+    -n1:數字
+    -n2:數字
+    */
+    // function add(args){
+    //     console.log(args.n1+args.n2);
+    // }
+    // let obj={
+    //     n1:3,n2:4
+    // };
+    // add(obj);
+    // add({
+    //     n1:5,n2:10
+    // })
+//    let num= prompt("輸入","3");
+//    //使用瀏覽器內建物建console
+//    console.log("fff");
+// let obj=new Object();
+// obj.x=3;
+// obj.level2=new Object();
+// obj.level2.text= "sss";
+// console.log(obj);
+// console.log(obj.level2.text);
+//HTML DOM:瀏覽器內建的window物件
+console.log(innerHeight);
+console.log(innerWidth);
+console.log(location.href);
+if(innerWidth<50){
+    location.href="手機網址";
+}
+console.log(innerWidth);
+console.log(IDBDatabase);
     </script>
 </body>
 
