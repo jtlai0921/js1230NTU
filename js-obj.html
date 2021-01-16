@@ -61,16 +61,37 @@
         // p2.show();
         //用來建立物件的函式
         //建構函式(Constructor):專門用來建立物件的函式
+        // function createPointObject(name,age,talk){
+        //     let p=new Object();
+        //     p.x=name;
+        //     p.y=age;
+        //     p.z=talk;
+        //     p.show=function(){
+        //         console.log(this.x+","+this.y+","+this.z);
+        //     };
+        //     return p;
+        // }
+        // //呼叫建構函式:new建構函式名稱(參數資料,參數資料,.........)
+        // let p1=createPointObject("l,plmxsx",22,"xsx11x");
+        // let p2=createPointObject("xsxsx",55,"sxsxsx");
+        // //使用物件
+        // console.log(3,4);
+        // console.log(0,0);
+        // p1.show();
+        // p2.show();
+        //////////////////
         function createPointObject(name,age,talk){
-            let p=new Object();
-            p.x=name;
-            p.y=age;
-            p.z=talk;
-            p.show=function(){
+            //自動建立空白物件，在建構函式中使用this取得
+           
+            this.x=name;
+            this.y=age;
+            this.z=talk;
+            this.show=function(){
                 console.log(this.x+","+this.y+","+this.z);
             };
-            return p;
+            return this;
         }
+        //呼叫建構函式:new建構函式名稱(參數資料,參數資料,.........)
         let p1=createPointObject("l,plmxsx",22,"xsx11x");
         let p2=createPointObject("xsxsx",55,"sxsxsx");
         //使用物件
