@@ -27,20 +27,35 @@
         //         }
         // };
         // console.log(p);
-        let man={
-            name:"A",
-            age:20,
-            talk:"1234",
+        let man = {
+            name: "json",
+            age: 20,
+            talk: "1234",
         };
-       console.log(man);
-       let=persom=new Object();
-       persom.name="A";
-       persom.age=20;
-       persom.talk="123";
-       persom.show=function(){
-           console.log(this.name+","+this.age+","+this.talk);
-       };
-       console.log(persom);
+        console.log(man);
+        ////////////////////////
+        let = persom = new Object();
+        persom.name = "this";
+        persom.age = 20;
+        persom.talk = "123";
+        persom.show = function () {
+            console.log(this.name + "," + this.age + "," + this.talk);
+        };
+        console.log(persom);
+        //包裝建立物件的程式
+        function createPointObject(){
+            let p=new Object();
+            p.x=3;
+            p.y=4;
+            p.show=function(){
+                console.log(this.x+","+this.y);
+            };
+            return p;
+        }
+        let p1=createPointObject();
+        console.log(p1);
+        console.log(p1.x+p1.y);
+        p1.show();
     </script>
 </body>
 
