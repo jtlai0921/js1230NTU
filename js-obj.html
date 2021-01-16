@@ -27,21 +27,21 @@
         //         }
         // };
         // console.log(p);
-        let man = {
-            name: "json",
-            age: 20,
-            talk: "1234",
-        };
-        console.log(man);
-        ////////////////////////
-        let = persom = new Object();
-        persom.name = "this";
-        persom.age = 20;
-        persom.talk = "123";
-        persom.show = function () {
-            console.log(this.name + "," + this.age + "," + this.talk);
-        };
-        console.log(persom);
+        // let man = {
+        //     name: "json",
+        //     age: 20,
+        //     talk: "1234",
+        // };
+        // console.log(man);
+        // ////////////////////////
+        // let = persom = new Object();
+        // persom.name = "this";
+        // persom.age = 20;
+        // persom.talk = "123";
+        // persom.show = function () {
+        //     console.log(this.name + "," + this.age + "," + this.talk);
+        // };
+        // console.log(persom);
         //包裝建立物件的程式
         // function createPointObject(xArg,yArg){
         //     let p=new Object();
@@ -89,14 +89,14 @@
             this.show=function(){
                 console.log(this.x+","+this.y+","+this.z);
             };
-            return this;
+            //return this;建構式自動rreturn this
         }
         //呼叫建構函式:new建構函式名稱(參數資料,參數資料,.........)
-        let p1=createPointObject("l,plmxsx",22,"xsx11x");
-        let p2=createPointObject("xsxsx",55,"sxsxsx");
+        // let p1=createPointObject("l,plmxsx",22,"xsx11x");
+        // let p2=createPointObject("xsxsx",55,"sxsxsx");
         //使用物件
-        console.log(3,4);
-        console.log(0,0);
+       let p1=new createPointObject(1,2,3);
+       let p2=new createPointObject(4,25,34);
         p1.show();
         p2.show();
     </script>
