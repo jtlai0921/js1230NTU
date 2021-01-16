@@ -80,7 +80,7 @@
         // p1.show();
         // p2.show();
         //////////////////
-        function createPointObject(name,age,talk){
+        function Point(name,age,talk){
             //自動建立空白物件，在建構函式中使用this取得
            
             this.x=name;
@@ -95,8 +95,8 @@
         // let p1=createPointObject("l,plmxsx",22,"xsx11x");
         // let p2=createPointObject("xsxsx",55,"sxsxsx");
         //使用物件
-       let p1=new createPointObject(1,2,3);
-       let p2=new createPointObject(4,25,34);
+       let p1=new Point(1,2,3);
+       let p2=new Point(4,25,34);
         p1.show();
         p2.show();
     </script>
