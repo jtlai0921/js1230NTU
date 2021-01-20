@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript html dom</title>
+</head>
+<style>
+    .abc {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<script>
+    x=1;
+cache=""
+function change(){
+  x++;
+  cache+="<img src="x+".jpg'>"; 
+  document.getElementById("photo").innerHTML=cache;
+}
+    </script>
+<body>
+    <h3>html dom <h3>
+            <div id="content" style="transition: opacity 0.5s;">今天來教</div>
+            <button onclick="change();">隱藏</button>
+            <button onclick="show();">顯示</button>
+            <span onclick="change();">點我</span>
+            <div id="photo"></div>
+            <input type="button" value="show photo" onclick="change1()">
+            <script>
+         
+                function change1() {
+
+                    document.getElementById("jpg").src = "b.jpg";
+
+                }
+                function change() {
+                    // document.body.innerHTML = "Change HTML";
+                    //取得想要操作的標籤 document.querySelector("CSS選擇器");
+                    let element = document.querySelector("#content");
+                    console.log(element);
+                    console.dir(element);
+                    //對標籤進行操作 
+                    //操作標籤的屬性:標籤.屬性的名稱="資料"    
+                    element.innerHTML = "今天學會HTML DOM";
+                    element.className = "abc";
+                    //操作標籤的CSS屬性:標籤..屬性="對應設定";
+                    element.style.textDecoration = "underline";
+
+
+                    element.style.display = "none";
+                }
+                function show() {
+                    let element = document.querySelector("#content");
+                    element.style.display = "block";
+                }
+
+            </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag{
+            font-weight:normal ;color:black;background-color: white;
+        }
+        .tag-selected{
+            font-weight:bold ;color:red;background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>seachbox</h3>
+    <div>
+        <span id="page" class="tag-selected" onclick="changToPage();">網頁</span id="text" onclick="changToImage();">
+        <span id="img" class="tag" onclick="changToImage();"> 圖片</span>
+
+    </div>
+    <div>
+        <input type="text" />
+        <input id="btn" type="button" value="網頁搜尋">
+    </div>
+    <script>
+        let pageElem = $("#page");
+        let imgElem = $("#img");
+        let btnElem = $("#btn");
+        function $(selector) {
+            return document.querySelector(selector);
+        }
+        function changToPage() {
+
+            pageElem.className="tag-selected";
+            imgElem.className = "tag";
+            btnElem.value = "網頁搜尋";
+        }
+        function changToImage() {
+
+            pageElem.className="tag";
+            imgElem.className = "tag-selected";
+            btnElem.value = "圖片搜尋";
+        }
+    </script>
+</body>
+
+</html>
