@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>拖曳</title>
     <style>
-        .box{
-            width: 100px;height: 100px;background-color:red;
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+        .box1{
+            position: fixed;
         }
     </style>
+   
 </head>
 
 <body>
-    <div id="box" class="bo"></div>
+    <div id="box" class="box"></div>
+    <div id="box1" class="box1"><img src="1.jpg" /></div> 
+    <script>
+        let box = document.querySelector("#box1");
+        let drag=function(){
+            document.addEventListener("mousemove",move);
+
+        }
+        let move = function (e) {
+            box.style.left=(e.clientX-50)+"px";
+            box.style.top=(e.clientY-50)+"px";
+        };
+        let drop=function(){
+            document.removeEventListener("mousemove",move);
+
+        }
+        //document.addEventListener("mousemove", move);
+        box.addEventListener("mousedown",drag);
+        box.addEventListener("mouseup",drop);
+    </script>
 </body>
+
 </html>
