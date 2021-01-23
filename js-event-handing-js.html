@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript事件處理</title>
+</head>
+<body>
+    <h3>Javascript事件處理</h3>
+    <button id="btn">點擊</button>
+    <!-- <button onclick="console.log('點到了')">點集</button>    -->
+    <script>
+        //事件處力的3個要素:觸發事件的標籤、事件總類、對應的處理函式
+        let btn=document.querySelector('#btn');
+        let clickHandler=function(e){
+            console.log(e.clientX,e.clientY);
+            if(e.ctrlKey){
+btn.removeEventListener("click",clickHandler);
+            }
+            // btn.removeEventListener("click",clickHandler);
+        };
+        //針對標籤做事件處理:標籤.addEvnentListener("事件種類",處理函式)
+    btn.addEventListener("click",clickHandler);
+   /*
+   1.瀏覽器偵測到使用者點擊按鈕，觸發點擊事件
+   2.瀏覽器蒐集到事件的相關訊息，產生[事件物件]Event Object let evenObject事件物件();
+   3.呼叫事件處理函式，並將[事件物件]透過參數傳入
+   clickHandler(eventObject)
+   */
+    let mousedown=function(){
+        this.style.color="red";
+    };
+    btn.addEventListener("mousedown",mousedown);
+    let mouseup=function(){
+        this.style.color="black";
+    };
+    btn.addEventListener("mouseup",mouseup);
+    </script>
+</body>
+</html>

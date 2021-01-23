@@ -10,18 +10,23 @@
 <body>
     <h3>事件處理</h3>
     <span onclick="console.log('點擊事件');" onmousedown="console.log('滑鼠按下');"> 測試看看</span>
-    <span onmouseover="over();" onmouseout="out();">
-        按鈕2
-    </span>
+    <span onmouseover="over(this);" onmouseout="out(this);"onmouseup="up(this);"onmousedown="down(this)">
+        按鈕2</span>
     <span onmouseover="this.style.background='grey'" onmouseout="this.style.background='white'"> 按鈕</span>
     <script>
-        function over() {
-            window.style.background = 'grey';
+        function over(elem) {
+            elem.style.background = 'grey';
 
         }
-        function out() {
-            window.style.background = 'white';
+        function out(elem) {
+            elem.style.background = 'white';
+        }
+        function up(elem) {
+            elem.style.background = 'red';
 
+        }
+        function down(elem) {
+            elem.style.background = 'yellow';
         }
     </script>
 </body>
