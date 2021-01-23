@@ -14,33 +14,39 @@
             left: 100px;
             top: 100px;
         }
-        .box1{
+
+        .box1 {
             position: fixed;
         }
     </style>
-   
+
 </head>
 
 <body>
-    <div id="box" class="box"></div>
-    <div id="box1" class="box1"><img src="1.jpg" /></div> 
-    <script>
-        let box = document.querySelector("#box1");
-        let drag=function(){
-            document.addEventListener("mousemove",move);
+    <div id="box" class="box">
+        <div style="background-color: black;height: 20px;">內容</div>
+    </div>
 
+
+    <div id="box1" class="box1"><img src="1.jpg" /></div>
+    <script>
+        let box = document.querySelector("#box");
+        let drag = function () {
+            document.addEventListener("mousemove", move);
+ box1.style.color ="black";
         }
         let move = function (e) {
-            box.style.left=(e.clientX-50)+"px";
-            box.style.top=(e.clientY-50)+"px";
+            box.style.left = (e.clientX - 50) + "px";
+            box.style.top = (e.clientY - 50) + "px";
+           
         };
-        let drop=function(){
-            document.removeEventListener("mousemove",move);
+        let drop = function () {
+            document.removeEventListener("mousemove", move);
 
         }
         //document.addEventListener("mousemove", move);
-        box.addEventListener("mousedown",drag);
-        box.addEventListener("mouseup",drop);
+        box.addEventListener("mousedown", drag);
+        box.addEventListener("mouseup", drop);
     </script>
 </body>
 
