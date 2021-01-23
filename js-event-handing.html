@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS事件處理</title>
 </head>
+
 <body>
     <h3>事件處理</h3>
-    <span onclick="console.log('點擊事件');"
-    onmousedown="console.log('滑鼠按下');"
-    > 測試看看</span>
-    <span onmouseover="over();"
-        onmouseout="out()">
+    <span onclick="console.log('點擊事件');" onmousedown="console.log('滑鼠按下');"> 測試看看</span>
+    <span onmouseover="over();" onmouseout="out();">
         按鈕2
     </span>
-    <span 
-    onmouseover="this.style.background='grey'"
-    onmouseout="this.style.background='white'"
-    > 按鈕</span>
+    <span onmouseover="this.style.background='grey'" onmouseout="this.style.background='white'"> 按鈕</span>
     <script>
+        function over() {
+            window.style.background = 'grey';
 
+        }
+        function out() {
+            window.style.background = 'white';
+
+        }
     </script>
 </body>
+
 </html>
