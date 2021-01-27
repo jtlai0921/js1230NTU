@@ -9,9 +9,21 @@
 </head>
 
 <body>
+    <h3>字串物件</h3>
+    <input type="text" id="input" value="Hello"/>
     <button onclick="check();">點擊</button>
     <script>
         function check() {
+            let text=document.querySelector("#input").value;
+            if(text.length==0){
+                window.alert("白癡");
+            }else if(text.indexOf("習大大")>-1){
+                window.alert("小熊維尼");
+            }
+            else if(text.toLowerCase().indexOf("fuck")>-1){
+                window.alert("小熊維尼");
+            }
+            console.log(text);
             // console.log("圓周率",Math.PI);
             // console.log("開根號",Math.floor(Math.sqrt(28)));
             // console.log("無條件進位",Math.ceil(2.000203203));
@@ -21,6 +33,13 @@
             //     at = at * 2;
             // }
             // console.log(at);
+            // let str=new String("Hello");
+            // console.log(str,"字串長度",str.length);
+            // console.log("取締2個字",str.charAt(1));
+            // console.log("是否HTTP開頭",str.startsWith("http://"));
+            // console.log("取得ell子字串",str.substring(1,4));
+            // console.log("是否函abc",str.indexOf("abc"));
+            // console.log("是否函llo",str.indexOf("llo"));
         }
     </script>
 </body>
