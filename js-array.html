@@ -17,23 +17,28 @@
     </select>
     <br/>
     年齡範圍
-    18以下<input type="radio" name="age" value="0">
-    18~30<input type="radio" name="age" value="18">
-    30~40<input type="radio" name="age" value="30">
-    40以上<input type="radio" name="age" value="40">
+    18以下<input type="radio" name="age" class="age" value="0"/>
+    18~30<input type="radio" name="age" class="age" value="18"/>
+    30~40<input type="radio" name="age" class="age" value="30"/>
+    40以上<input type="radio" name="age" class="age" value="40"/>
     <input type="text" id="input" value="Hello" />
     <button onclick="check();">點擊</button>
     <script>
-        function check() {
-            let gender = document.querySelector("#gender");
-            // console.log(gender.selectedIndex);
-            if(gender.selectedIndex==0)
-            {
-                window.alert("請選性別");
-            }else{
-                let selectedOption=gender.options[gender.selectedIndex];
-                console.log(selectedOption.value);
+         function check() {
+            let ages = document.querySelectorAll(".age");
+                console.log(ages);
             }
+            //逐一檢查
+        // function check() {
+        //     let gender = document.querySelector("#gender");
+        //     // console.log(gender.selectedIndex);
+        //     if(gender.selectedIndex==0)
+        //     {
+        //         window.alert("請選性別");
+        //     }else{
+        //         let selectedOption=gender.options[gender.selectedIndex];
+        //         console.log(selectedOption.value);
+        //     }
             //   //按順序存放其他資料容器
             //   let grades=new Array();
             //   grades[0]=40;
@@ -47,7 +52,7 @@
             //   }
             //   let avg=total/grades.length;
             //   console.log(avg);
-        }
+        
     </script>
 </body>
 
