@@ -11,7 +11,16 @@
 </head>
 
 <body>
+    <h3>產品列表</h3>
+    <div id="list"></div>
     <script>
+        function show(data){
+            let list=document.querySelector("#list");
+            for (let i = 0; i < data.length; i++) {
+                list.innerHTML+="<div>"+data[i].name+":"+data[i].price+"</div>"
+                
+            }
+        }
         //ajax/fetch
         //fetch(網址)回傳1個Promise物件，代表某個工作
         let url = "https://cwpeng.github.io/live-records-samples/data/products.json";
@@ -21,6 +30,7 @@
            return response.json();
         }).then(function(data){
             console.log(data);
+            show(data);
         });
 
     </script>
