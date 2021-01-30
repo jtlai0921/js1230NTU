@@ -18,7 +18,9 @@
         let fetchJob = fetch(url);
         //promise物件.then(函式(工作結果){})
         fetchJob.then(function (response) {//匿名
-            console.log(response);
+           return response.json();
+        }).then(function(data){
+            console.log(data);
         });
 
     </script>
