@@ -17,7 +17,10 @@
         function show(data){
             let list=document.querySelector("#list");
             for (let i = 0; i < data.length; i++) {
-                list.innerHTML+="<div>"+data[i].name+":"+data[i].price+"</div>"       
+                let item=document.createElement("div");
+                item.className="product";
+                item.innerHTML=data[i].name+":"+data[i].price;
+                list.appendChild(item);    
             }
         }
         //ajax/fetch
