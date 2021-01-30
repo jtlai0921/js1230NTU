@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+
+    <title>fetch</title>
+
+</head>
+
+<body>
+    <script>
+        //ajax/fetch
+        //fetch(網址)回傳1個Promise物件，代表某個工作
+        let url = "https://cwpeng.github.io/live-records-samples/data/products.json";
+        let fetchJob = fetch(url);
+        //promise物件.then(函式(工作結果){})
+        fetchJob.then(function (response) {//匿名
+            console.log(response);
+        });
+
+    </script>
+
+</body>
+
+</html>
